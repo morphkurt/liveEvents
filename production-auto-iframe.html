@@ -75,14 +75,19 @@
                 }
             }
         };
-
+        var eventId = 'GENERIC'
+        if (playerParams.eventId){
+            eventId = playerParams.eventId;
+        }
+        
         //Conviva data
         var convivaData = {
             "viewerId": 'ConvivaQE',
             "customerKey": "cefef1993557ccaad08847f77689343223365e06",
             "applicationName": "iFrame",
             "appBuild": "1.1",
-            "Product": "Telstra events"
+            "Product": "Telstra events",
+            "customMetadata": {"eventId": eventId }
         }
         playerParams["conviva"] = convivaData;
 
